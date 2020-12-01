@@ -97,7 +97,7 @@ dependencies {
     antLauncherJar(toolsJar())
 }
 
-val generationRoot = projectDir.resolve("tests-gen")
+val generationRoot = projectDir.resolve("test-gen")
 
 sourceSets {
     "main" { }
