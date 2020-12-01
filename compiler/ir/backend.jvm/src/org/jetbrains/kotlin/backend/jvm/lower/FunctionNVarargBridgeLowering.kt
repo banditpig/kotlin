@@ -61,7 +61,10 @@ private class FunctionNVarargBridgeLowering(val context: JvmBackendContext) :
                     this@FunctionNVarargBridgeLowering.context.ir.symbols.functionN.defaultType
                 )
                 putValueArgument(0, irArray(irSymbols.array.typeWith(context.irBuiltIns.anyNType)) {
-                    (0 until expression.valueArgumentsCount).forEach { +expression.getValueArgument(it)!! }
+                    (0 until expression.valueArgumentsCount).forEach {
+                        +expression.getValueArgument(it)!!
+                            .transform(this@FunctionNVarargBridgeLowering, null)
+                    }
                 })
             }
         }
