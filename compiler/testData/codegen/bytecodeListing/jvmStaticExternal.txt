@@ -1,0 +1,8 @@
+@kotlin.Metadata
+public final class X {
+    // source: 'jvmStaticExternal.kt'
+    public final static @org.jetbrains.annotations.NotNull field INSTANCE: X
+    static method <clinit>(): void
+    private method <init>(): void
+    public native final static @kotlin.jvm.JvmStatic method foo(): void
+}
